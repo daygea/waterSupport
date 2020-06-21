@@ -44,7 +44,6 @@
                             </div>
                         </div>
 
-
                         <div class="form-group{{ $errors->has('unit_price') ? ' has-error' : '' }}">
                             <label for="qty" autocomplete="off" class="col-md-4 control-label">Unit Price</label>
 
@@ -59,7 +58,7 @@
                             </div>
                         </div>
 
-                       <!--  <div class="form-group{{ $errors->has('reduced_price') ? ' has-error' : '' }}">
+                        <div class="form-group{{ $errors->has('reduced_price') ? ' has-error' : '' }}">
                             <label for="qty" autocomplete="off" class="col-md-4 control-label">Wholesale Price</label>
 
                             <div class="col-md-6">
@@ -71,7 +70,7 @@
                                     </span>
                                 @endif
                             </div>
-                        </div> -->
+                        </div>
                         
 
                         <div class="form-group{{ $errors->has('message') ? ' has-error' : '' }}">

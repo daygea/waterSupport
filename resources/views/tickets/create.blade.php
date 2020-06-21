@@ -48,6 +48,18 @@
                             </div>
                         </div>
 
+                         <div class="form-group{{ $errors->has('type') ? ' has-error' : '' }}">
+
+                            <div class="col-md-6 col-md-offset-4">
+                            
+                                Retail <input type="radio" name="type" value="retail" checked>
+                                &nbsp &nbsp &nbsp
+                                Wholesale <input type="radio" name="type" value="wholesale">
+                            </div>
+
+                        </div>
+
+
                          <div class="form-group{{ $errors->has('name') ? ' has-error' : '' }}">
                             <label for="name" class="col-md-4 control-label">Customer</label>
 

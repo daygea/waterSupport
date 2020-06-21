@@ -22,7 +22,7 @@
 		        					<th>Title</th>
 		        					<th>Quantity</th>
 		        					<th>Unit Price</th>	
-		        					<!-- <th>Wholesale Price</th>			 -->
+		        					<th>Wholesale Price</th>			
 		        					<th>Last Updated</th>
 		        					<th style="text-align:center" colspan="3">Actions</th>
 		        				</tr>
@@ -41,9 +41,9 @@
 		        					<td>		        						
 		        						N{{ number_format($product->price) }}		        						
 		        					</td>   
-		        					<!-- <td>		        						
-		        						N{{-- number_format($product->reduced_price) --}}		        						
-		        					</td>   -->
+		        					<td>		        						
+		        						N{{ number_format($product->reduced_price) }}		        						
+		        					</td>  
 		        					<td>{{ $product->updated_at }}</td>
 		        					<td>
 		        						<a href="{{ url('admin/products/' . $product->id) }}" class="btn btn-primary">Edit</a>

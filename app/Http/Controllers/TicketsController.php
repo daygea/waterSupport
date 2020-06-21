@@ -74,6 +74,7 @@ class TicketsController extends Controller
             'category'  => 'required',
             'phone'  => 'required',
             'qty'  => 'required',
+            'type'  => 'required',
             // 'priority'  => 'required',
             'message'   => 'required'
         ]);
@@ -92,6 +93,12 @@ class TicketsController extends Controller
             // return redirect()->route('/admin/tickets');
         }
 
+        if ($request->type == 'retail'){
+            $price = $productInfo->price;
+        } else {
+            $price = $productInfo->reduced_price;
+        }
+
         $ticket = new Ticket([
             'customer_name'  => $request->name,
             'title'     => $productInfo->product_name,
@@ -99,7 +106,7 @@ class TicketsController extends Controller
             'ticket_id' => strtoupper(str_random(10)),
             'category_id'  => $request->input('category'),
             'qty'  => $request->input('qty'),
-            'price' => $request->input('qty') * $productInfo->price,
+            'price' => $request->input('qty') * $price,
             'phone'  => $request->input('phone'),
             // 'priority'  => $request->input('priority'),
             'message'   => $request->input('message'),

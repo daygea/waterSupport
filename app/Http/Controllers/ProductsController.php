@@ -74,7 +74,7 @@ class ProductsController extends Controller
             'product_name' => $request->title, 
             'product_qty' => $request->qty, 
             'price' => $request->unit_price, 
-            // 'reduced_price' =>$request->reduced_price, 
+            'reduced_price' =>$request->reduced_price, 
             'description' => $request->message ]);
 
         // $mailer->sendTicketInformation(Auth::user(), $ticket);
@@ -103,7 +103,7 @@ class ProductsController extends Controller
             'product_name' => $request->title, 
             'product_qty' => $request->qty, 
             'price' => $request->unit_price, 
-            // 'reduced_price' =>$request->reduced_price, 
+            'reduced_price' =>$request->reduced_price, 
             'description' => $request->message, 
             'updated_at' => DB::raw('NOW()') ]);
 
